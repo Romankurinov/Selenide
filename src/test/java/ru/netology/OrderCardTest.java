@@ -19,6 +19,6 @@ public class OrderCardTest {
             $("[data-test-id=agreement]").click();
             $(".button").click();
             $("[data-test-id=notification]").should(visible, Duration.ofSeconds(15));
-            $("[class=notification__content]").should(text("Встреча успешно забронирована на "+$("[data-test-id=date] input").getValue()));
+            $("[class=notification__content]").should(text("Встреча успешно забронирована на "+$("[data-test-id=date] input").getValue()), Duration.ofSeconds(20));
     }
 }
